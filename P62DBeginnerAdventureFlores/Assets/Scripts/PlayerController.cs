@@ -62,9 +62,9 @@ public class PlayerController : MonoBehaviour
         if (amount < 0)
         {
             if (isInvincible)
-               
-               return;
-            
+            {
+                return;
+            }
             isInvincible = true;
             damageCooldown = timeInvinvible;
         }

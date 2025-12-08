@@ -6,14 +6,12 @@ using UnityEngine.UIElements;
 public class UIHandler : MonoBehaviour
 {
     private VisualElement m_Healthbar;
-    internal static object instances;
-    internal static object instance;
-
-    public static UIHandler Instance { get; private set; }
+    
+    public static UIHandler instance { get; private set; }
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
     }
     // Start is called before the first frame update
     void Start()
@@ -24,5 +22,8 @@ public class UIHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void SetHealthValue(float percentage) => m_Healthbar.style.width = Length.Percent(100 * percentage);
+    public void SetHealthValue(float percentage)
+    {
+        m_Healthbar.style.width = Length.Percent(100 * percentage);
+    }
 }
