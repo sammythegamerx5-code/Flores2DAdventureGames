@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public float timeInvinvible = 2.0f;
     bool isInvincible;
     float damageCooldown;
+    internal int health;
 
     // Start is called before the first frame update
     void Start()
